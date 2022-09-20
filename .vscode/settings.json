@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "esp_adc_cal.h": "c",
+        "gpio.h": "c",
+        "adc.h": "c",
+        "task.h": "c"
+    }
+}
