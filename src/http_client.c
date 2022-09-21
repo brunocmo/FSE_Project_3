@@ -41,7 +41,7 @@ esp_err_t _http_event_handle(esp_http_client_event_t *evt)
 
 void http_request(){
     esp_http_client_config_t config = {
-        .url = "http://192.168.0.49:8080/variavel/",
+        .url = "http://quotes.rest/qod",
         .event_handler = _http_event_handle,
     };
     esp_http_client_handle_t client = esp_http_client_init(&config);
@@ -58,7 +58,7 @@ void http_request(){
 void https_request()
 {
     esp_http_client_config_t config = {
-        .url = "https://covid19-brazil-api.vercel.app/api/report/v1",
+        .url = "https://covid19-brazil-api.now.sh/api/report/v1",
         .event_handler = _http_event_handle,
         //.cert_pem = howsmyssl_com_root_cert_pem_start,
     };
