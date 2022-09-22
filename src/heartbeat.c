@@ -18,7 +18,6 @@ void heartbeat_init() {
     // gpio_set_level(LED, 0);
     // vTaskDelay(1000 / portTICK_RATE_MS);
 
-    uint32_t voltage;
     int toVivo = 0;
     esp_adc_cal_characterize(ADC_UNIT_1, ADC_ATTEN_DB_0, ADC_WIDTH_BIT_DEFAULT, 0, &adc1_chars);
     ESP_ERROR_CHECK(adc1_config_channel_atten(ADC1_CHANNEL_6, ADC_ATTEN_DB_0));
@@ -36,10 +35,10 @@ void heartbeat_init() {
     int limit = 0;
 
     while(1) {
-        voltage = adc1_get_raw(ADC1_CHANNEL_6);
+        batimentos = adc1_get_raw(ADC1_CHANNEL_6);
 
 
-        if(voltage > limit) {
+        if(batimentos > limit) {
             if(!toVivo) {
                 ESP_LOGI(TAG, "BATIDA!");
             }
@@ -48,23 +47,23 @@ void heartbeat_init() {
             toVivo = 0;
         }
 
-        vTaskDelay(50 / portTICK_RATE_MS);
+        vTaskDelay(200 / portTICK_RATE_MS);
 
-        if (voltage > maximo) maximo = voltage;
-        if (voltage < minimo) minimo = voltage;
+        if (batimentos > maximo) maximo = batimentos;
+        if (batimentos < minimo) minimo = batimentos;
 
         limit = maximo - minimo;
         limit = (int)((float)(limit) * 0.2);
         limit = maximo - limit;
 
-        ESP_LOGI(TAG, "valor: %d || %d ", voltage, limit);
+        // ESP_LOGI(TAG, "valor: %d || %d ", batimentos, limit);
         
         incrementador++;
 
 
         if(incrementador > 32 && incrementador < 42 ){
-            if (voltage > maximoSecond) maximoSecond = voltage;
-            if (voltage < minimoSecond) minimoSecond = voltage;
+            if (batimentos > maximoSecond) maximoSecond = batimentos;
+            if (batimentos < minimoSecond) minimoSecond = batimentos;
         }
 
         if (incrementador>43) {

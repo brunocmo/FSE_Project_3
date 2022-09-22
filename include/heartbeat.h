@@ -11,4 +11,6 @@
 
 void heartbeat_init();
 
+uint32_t batimentos;
+
 #endif
