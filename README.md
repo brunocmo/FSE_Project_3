@@ -2,7 +2,7 @@
 
 Trabalho 3 da disciplina de Fundamentos de Sistemas Embarcados (2022/1)
 
-Para acessar o projeto, clique [aqui](https://gitlab.com/fse_fga/trabalhos-2022_1/trabalho-2-2022-1).
+Para acessar o projeto, clique [aqui](https://gitlab.com/fse_fga/trabalhos-2022_1/trabalho-3-2022-1).
 
 ***
 
@@ -16,9 +16,9 @@ Para acessar o projeto, clique [aqui](https://gitlab.com/fse_fga/trabalhos-2022_
 
 O software foi feito para utilização em uma esp32doit-devkit-v1.
 
-É necessário a utilização do framework de desenvolvimento da Espressif IoT - https://github.com/espressif/esp-idf .
+É necessário a utilização do framework de desenvolvimento da Espressif IoT - https://github.com/espressif/esp-idf
 
-Também é possivel com a utilização da extensão do Visual Studio Code chamada Platform IO - https://platformio.org/ .
+Também é possivel com a utilização da extensão do Visual Studio Code chamada Platform IO - https://platformio.org/
 
 ***
 ## Instalação 
@@ -29,9 +29,9 @@ Baixe o repositório e acesse a pasta.
 `cd FSE_Project_3`
 
 Por praticidade, foi utilizado os comandos vindos do terminal da Platform IO.
-Para fazer a configuração no menu do programa:
+Para fazer a configuração do wifi no menu do programa:
 
-`pio run -t menuconfig`
+`platformio run -t menuconfig`
 
 Para fazer a build do programa:
 
@@ -47,6 +47,8 @@ Para monitorar a esp32:
 
 ***
 ## Uso
+
+Configure o wifi pelo menuconfig na opção "Configuração do Wifi Configuration"
 
 Ao iniciar o programa, veja as funcionalidades implementadas na dashboard.
 
