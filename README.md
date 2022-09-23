@@ -46,13 +46,29 @@ Para monitorar a esp32:
 `platformio device monitor --environment esp32doit-devkit-v1`
 
 ***
+
+## Sensores
+
+[DHT11](https://www.filipeflop.com/produto/sensor-de-umidade-e-temperatura-dht11/)
+
+[KY-039](https://www.electrofun.pt/blog/como-usar-o-sensor-de-pulsacao-infravermelho-ky-039/)
+
+Hall Sensor - Embutido na placa.
+
 ## Uso
 
 Configure o wifi pelo menuconfig na opção "Configuração do Wifi Configuration"
 
+Faça o build e em seguida o upload no dispositivo.
+
 Ao iniciar o programa, veja as funcionalidades implementadas na dashboard.
 
 ***
+
+## Video
+
+https://youtu.be/8kiPMiZRBYI
+
 ## Imagens
 
 1. Imagem da esp32
