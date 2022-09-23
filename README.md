@@ -67,7 +67,7 @@ Ao iniciar o programa, veja as funcionalidades implementadas na dashboard.
 
 ## Video
 
-https://youtu.be/8kiPMiZRBYI
+[<img src="https://img.youtube.com/vi/8kiPMiZRBYI/maxresdefault.jpg" width="50%">](https://youtu.be/8kiPMiZRBYI)
 
 ## Imagens
 
